@@ -1,0 +1,27 @@
+[
+    {
+    "id": "1",
+    "name": "Rocko",
+    "image": "./img/Rocko_Wallaby.png",
+    "clicked": false
+
+},
+{
+    "id": "2",
+    "name": "Spunky",
+    "image": "./img/spunky2.png",
+    "clicked": false
+},
+{
+    "id": "3",
+    "name": "Filber",
+    "image": "./img/Filburt_Shellbach.png",
+    "clicked": false
+},
+{
+    "id": "4",
+    "name": "Elkie",
+    "image": "./img/elkie.png",
+    "clicked": false
+}
+]
