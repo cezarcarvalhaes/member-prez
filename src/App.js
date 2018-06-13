@@ -4,12 +4,15 @@ import Wrapper from "./components/Wrapper";
 import images from "./images.json";
 import Clicker from "./components/Clicker"
 import CardWrapper from "./components/CardWrapper";
+import Hero from "./components/Hero";
 import "./App.css";
 
 class App extends React.Component {
   state = {
     characters: [],
-    score: 0
+    score: 0,
+    topScore: 0,
+    message: "",
   };
 
   //Fisher-Yates shuffle function for shuffling images
@@ -33,30 +36,53 @@ class App extends React.Component {
   // click sets this.state.clicked to true
   clickPic = (event) => {
     event.preventDefault();
-    let clec = event.target.getAttribute("data-clicked");
-    console.log(clec)
+    console.log(this.state.characters)
+    //Checks if a pic has already been clicked
     if (event.target.getAttribute("data-clicked") === "true") {
       this.youLose();
     }
     else {
+      //Change game message
+      this.setState({message: "You Guessed Correctly!"})
+      //Grabs id of the image that was clicked and saves to tempId
       let tempId = event.target.getAttribute("id")
-      console.log(tempId)
-      // We always use the setState method to update a component's state
+      //Filters through our array to match our tempId and saves the current state to newState
       let newState = this.state.characters.filter((character) => { return character.id === tempId })
+      //Because filter() returns an array, we're grabbing the first (and only) item in our array
+      //Set that objects 'clicked' value to 'true'
       newState[0].clicked = true;
-      console.log(newState[0])
+      //Updates our current characters array in our state
       this.setState({ newState });
-      console.log(this.state)
+      //Reshuffles the images
       this.shuffle(images)
-      this.setState({ score: this.state.score + 1 })
+      //Updates our score and top score.
+      //Pass 'this.updateTopScore' as a second argument (callback) due to setState's async nature. 
+      this.setState({ score: this.state.score + 1 }, this.updateTopScore)
     }
   };
 
+  updateTopScore = ()=> {
+    if (this.state.score >= this.state.topScore) {
+      this.setState({topScore: this.state.score})
+    }
+  }
+
+  resetFalse = ()=> {
+    let resetCharacters = this.state.characters;
+    for (var i = 0; i < resetCharacters.length; i++) {
+      resetCharacters[i].clicked = false;
+    }
+    this.setState({characters: resetCharacters})
+  }
+
   youLose = () => {
-    // We always use the setState method to update a component's state
-    console.log("you lose")
-    alert("You Lose!")
+    //Resets score
     this.setState({ score: 0 });
+    //Change message
+    this.setState({message: "You Lose!"})
+    //Set all characters to clicked: false
+    this.setState({characters: images})
+    this.resetFalse()
     this.shuffle(images)
   };
 
@@ -68,7 +94,8 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Clicker score={this.state.score} />
+        <Clicker score={this.state.score} topScore={this.state.topScore} message= {this.state.message}/>
+        <Hero/>
         <CardWrapper>
           {this.state.characters.map(img => (
             <ImageCard

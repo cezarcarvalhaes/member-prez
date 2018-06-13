@@ -1,0 +1,11 @@
+.hero {
+    background-image: url("./wh-old.jpg");
+    height: 500px;
+    width: 100%;
+    padding: 3em 1.5em;
+}
+
+.hero h1 {
+    text-shadow: 1px 2px #444;
+    color: #0d155f;
+}

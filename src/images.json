@@ -1,27 +1,261 @@
 [
     {
     "id": "1",
-    "name": "Rocko",
-    "image": "./img/Rocko_Wallaby.png",
+    "name": "George Washington",
+    "image": "./img/GW.jpg",
     "clicked": false
 
 },
 {
     "id": "2",
-    "name": "Spunky",
-    "image": "./img/spunky2.png",
+    "name": "John Adams",
+    "image": "./img/JA.jpg",
     "clicked": false
 },
 {
     "id": "3",
-    "name": "Filber",
-    "image": "./img/Filburt_Shellbach.png",
+    "name": "Thomas Jefferson",
+    "image": "./img/TJ.jpg",
     "clicked": false
 },
 {
     "id": "4",
-    "name": "Elkie",
-    "image": "./img/elkie.png",
+    "name": "James Madison",
+    "image": "./img/JMAD.jpg",
+    "clicked": false
+},
+{
+    "id": "5",
+    "name": "James Monroe",
+    "image": "./img/JMON.jpg",
+    "clicked": false
+},
+{
+    "id": "6",
+    "name": "John Quincy Adams",
+    "image": "./img/JQA.jpg",
+    "clicked": false
+},
+{
+    "id": "7",
+    "name": "Andrew Jackson",
+    "image": "./img/AJ.jpg",
+    "clicked": false
+},
+{
+    "id": "8",
+    "name": "Martin Van Buren",
+    "image": "./img/MVB.jpg",
+    "clicked": false
+},
+{
+    "id": "9",
+    "name": "William Henry Harrison",
+    "image": "./img/WHH.jpg",
+    "clicked": false
+},
+{
+    "id": "10",
+    "name": "John Tyler",
+    "image": "./img/JT.jpg",
+    "clicked": false
+},
+{
+    "id": "11",
+    "name": "James K Polk",
+    "image": "./img/JP.jpg",
+    "clicked": false
+},
+{
+    "id": "12",
+    "name": "Zachary Taylor",
+    "image": "./img/ZT.jpg",
+    "clicked": false
+},
+{
+    "id": "13",
+    "name": "Millard Fillmore",
+    "image": "./img/MF.jpg",
+    "clicked": false
+},
+{
+    "id": "14",
+    "name": "Franklin Pierce",
+    "image": "./img/FP.jpg",
+    "clicked": false
+},
+{
+    "id": "15",
+    "name": "James Buchanan",
+    "image": "./img/JB.jpg",
+    "clicked": false
+},
+{
+    "id": "16",
+    "name": "Abraham Lincoln",
+    "image": "./img/AL.jpg",
+    "clicked": false
+},
+{
+    "id": "17",
+    "name": "Andrew Johnson",
+    "image": "./img/AJON.jpg",
+    "clicked": false
+},
+{
+    "id": "18",
+    "name": "Ulysses S Grant",
+    "image": "./img/UG.jpg",
+    "clicked": false
+},
+{
+    "id": "19",
+    "name": "Rutherford B. Hayes",
+    "image": "./img/RBH.jpg",
+    "clicked": false
+},
+{
+    "id": "20",
+    "name": "James Garfield",
+    "image": "./img/JG.jpg",
+    "clicked": false
+},
+{
+    "id": "21",
+    "name": "Chester A Arthur",
+    "image": "./img/CA.jpg",
+    "clicked": false
+},
+{
+    "id": "22",
+    "name": "Grover Cleveland",
+    "image": "./img/GC.jpg",
+    "clicked": false
+},
+{
+    "id": "23",
+    "name": "Benjamin Harrison",
+    "image": "./img/BH.jpg",
+    "clicked": false
+},
+{
+    "id": "24",
+    "name": "William McKinley",
+    "image": "./img/JMAD.jpg",
+    "clicked": false
+},
+{
+    "id": "25",
+    "name": "Theodore Roosevelt",
+    "image": "./img/TR.jpg",
+    "clicked": false
+},
+{
+    "id": "26",
+    "name": "William Howard Taft ",
+    "image": "./img/WT.jpg",
+    "clicked": false
+},
+{
+    "id": "27",
+    "name": "Woodrow Wilson",
+    "image": "./img/WW.jpg",
+    "clicked": false
+},
+{
+    "id": "28",
+    "name": "Warren G. Harding ",
+    "image": "./img/WGH.jpg",
+    "clicked": false
+},
+{
+    "id": "29",
+    "name": "Calvin Coolidge",
+    "image": "./img/CC.jpg",
+    "clicked": false
+},
+{
+    "id": "30",
+    "name": "Herbert Hoover",
+    "image": "./img/HH.jpg",
+    "clicked": false
+},
+{
+    "id": "31",
+    "name": "Franklin D. Roosevelt",
+    "image": "./img/FDR.jpg",
+    "clicked": false
+},
+{
+    "id": "32",
+    "name": "Harry S. Truman",
+    "image": "./img/HST.jpg",
+    "clicked": false
+},
+{
+    "id": "33",
+    "name": "Dwight D. Eisenhower",
+    "image": "./img/DE.jpg",
+    "clicked": false
+},
+{
+    "id": "34",
+    "name": "John F. Kennedy",
+    "image": "./img/JFK.jpg",
+    "clicked": false
+},
+{
+    "id": "35",
+    "name": "Lyndon B. Johnson",
+    "image": "./img/LBJ.jpg",
+    "clicked": false
+},
+{
+    "id": "36",
+    "name": "Richard Nixon",
+    "image": "./img/RN.jpg",
+    "clicked": false
+},
+{
+    "id": "37",
+    "name": "Gerald Ford",
+    "image": "./img/GF.jpg",
+    "clicked": false
+},
+{
+    "id": "38",
+    "name": "Jimmy Carter",
+    "image": "./img/JC.jpg",
+    "clicked": false
+},
+{
+    "id": "39",
+    "name": "Ronald Reagan",
+    "image": "./img/RR.jpg",
+    "clicked": false
+},
+{
+    "id": "40",
+    "name": "George H. W. Bush",
+    "image": "./img/GHWB.jpg",
+    "clicked": false
+},
+{
+    "id": "41",
+    "name": "George W. Bush",
+    "image": "./img/GWB.jpg",
+    "clicked": false
+},
+{
+    "id": "42",
+    "name": "William Clinton",
+    "image": "./img/WC.jpg",
+    "clicked": false
+},
+{
+    "id": "43",
+    "name": "Barack Obama",
+    "image": "./img/BO.jpg",
     "clicked": false
 }
 ]
