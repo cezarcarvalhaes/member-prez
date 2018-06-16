@@ -5,6 +5,7 @@ import images from "./images.json";
 import Clicker from "./components/Clicker"
 import CardWrapper from "./components/CardWrapper";
 import Hero from "./components/Hero";
+import Modal from "./components/Modal";
 import "./App.css";
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
     score: 0,
     topScore: 0,
     message: "",
+    modal: false,
   };
 
   //Fisher-Yates shuffle function for shuffling images
@@ -76,14 +78,15 @@ class App extends React.Component {
   }
 
   youLose = () => {
+    this.setState({ modal: true });
     //Resets score
     this.setState({ score: 0 });
     //Change message
-    this.setState({message: "You Lose!"})
+    this.setState({message: "You Lose!"});
     //Set all characters to clicked: false
-    this.setState({characters: images})
-    this.resetFalse()
-    this.shuffle(images)
+    this.setState({characters: images});
+    this.resetFalse();
+    this.shuffle(images);
   };
 
   //When the component loads, shuffle images.
@@ -91,9 +94,23 @@ class App extends React.Component {
     this.shuffle(images)
   }
 
+  reset = (event) => {
+    event.preventDefault();
+    this.setState({modal: false});
+    this.setState({message: ""});
+  }
+
   render() {
+    let toggleModal 
+    if (this.state.modal === true){
+      toggleModal = "show"
+    }
+    else {
+      toggleModal = "modal"
+    }
     return (
       <Wrapper>
+        <Modal modal = {toggleModal} score={this.state.topScore} reset={this.reset}/>
         <Clicker score={this.state.score} topScore={this.state.topScore} message= {this.state.message}/>
         <Hero/>
         <CardWrapper>
