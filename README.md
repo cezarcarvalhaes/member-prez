@@ -1,4 +1,4 @@
-###Member Prez
+# Member Prez
 
 Member Prez is a short memory game using US Presidents. The app was developed in React usng the Create React App and styled using the Materialize CSS framework.
 
